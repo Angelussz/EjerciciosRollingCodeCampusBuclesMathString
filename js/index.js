@@ -237,6 +237,66 @@ const nombresyEdades = (cantidad=3)=>{
 const aleatorio = (numero)=>{
     console.log(Math.random() * numero);
 }
+
+/* 
+Ejercicios con String 
+---------------------------
+*/
+// Ejercicio 13
+const textoMayuscula = ()=>{
+    let texto = prompt("Ingrese texto");
+    console.log(texto.toUpperCase())
+}
+
+// Ejercicio 14
+const caracteresConGuion = ()=>{
+    let texto = prompt("Ingrese texto");
+    let textoNuevo = "";
+    for(let i=0;i<texto.length;i++){
+        textoNuevo+=(texto.charAt(i)+"-");
+        
+    }
+    console.log(textoNuevo)
+
+}
+
+// Ejercicio 15
+const vocalesTexto = ()=>{
+    let texto = prompt("Ingrese texto");
+    let numVocales = 0;
+    for(let i=0;i<texto.length;i++){
+        if(texto.charAt(i) === "a" || texto.charAt(i) === "e" || texto.charAt(i) === "i" || texto.charAt(i) === "o" || texto.charAt(i) === "u" ) numVocales++;
+        
+    }
+    console.log(numVocales);
+
+}
+
+// Ejercicio 16
+const textoReves = ()=>{
+    let texto = prompt("Ingrese texto");
+    let textoNuevo = "";
+    for(let i=texto.length;i>0;i--){
+        textoNuevo+= texto.charAt(i);
+        
+    }
+    console.log(textoNuevo)
+}
+
+// Ejercicios 17
+
+const primeraVocalTexto = ()=>{
+    let texto = prompt("Ingrese texto");
+    let posicion = -1;
+    for(let i=0;i<texto.length;i++){
+        if(texto.charAt(i) === "a" || texto.charAt(i) === "e" || texto.charAt(i) === "i" || texto.charAt(i) === "o" || texto.charAt(i) === "u" ){
+            posicion = i;
+            break;
+        }
+    }
+    console.log(posicion)
+}
+
 // let edad = prompt("Ingrese la edad para saber si puede conducir");
 // ComprobarEdad(edad)
 // let nota = prompt("Ingrese la nota obtenida");
@@ -251,3 +311,8 @@ const aleatorio = (numero)=>{
 // TablaPorFilasYColumnas();
 // nombresyEdades();
 // aleatorio(244);
+// textoMayuscula();
+// caracteresConGuion();
+// vocalesTexto();
+// textoReves();
+primeraVocalTexto();
