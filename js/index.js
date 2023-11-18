@@ -1,3 +1,7 @@
+/* 
+Ejercicios Bucles
+----------------------------------
+*/
 // Validar numero
 const NoEsNumero = (numero) => {
   return isNaN(numero);
@@ -181,6 +185,7 @@ const numerosAl500 = ()=>{
     }
 }
 
+// Ejercicio 10
 const TablaPorFilasYColumnas = ()=>{
     let fila = parseInt(prompt("Ingrese fila"));
     let columna = parseInt(prompt("Ingrese columna"));
@@ -198,6 +203,40 @@ const TablaPorFilasYColumnas = ()=>{
     console.log(tabla)
 }
 
+/* 
+Ejercicios con Math
+-----------------------------------------
+*/
+
+// Ejercicio 11
+const nombresyEdades = (cantidad=3)=>{
+    const usuarios = [];
+    const edades = [];
+    do {
+        let nombre = prompt("Ingrese un nombre");
+        usuarios.push(nombre);
+        let edad = prompt("Ingrese edad");
+        while (NoEsNumero(parseInt(edad)) || parseInt(edad) < 0) {
+            edad = prompt("Ingrese edad");
+        }
+        edades.push(parseInt(edad));
+        // console.log(usuarios);
+        cantidad--;
+
+    } while (cantidad>0);
+
+    let mayor = Math.max(...edades);
+    usuarios.forEach((usuario,index)=>{
+        if(edades[index] === mayor){
+            console.log(usuario)
+        }
+    })
+}
+
+// Ejercicios 12
+const aleatorio = (numero)=>{
+    console.log(Math.random() * numero);
+}
 // let edad = prompt("Ingrese la edad para saber si puede conducir");
 // ComprobarEdad(edad)
 // let nota = prompt("Ingrese la nota obtenida");
@@ -209,4 +248,6 @@ const TablaPorFilasYColumnas = ()=>{
 // piramideInversa();
 // piramideUsuario();
 // numerosAl500();
-TablaPorFilasYColumnas();
+// TablaPorFilasYColumnas();
+// nombresyEdades();
+// aleatorio(244);

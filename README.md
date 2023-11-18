@@ -2,5 +2,5 @@
 
 Ejercicios de bucles, Math y String
  - Bucles ✔️
- - Math ❌
+ - Math ✔️
  - String ❌
