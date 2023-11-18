@@ -3,4 +3,4 @@
 Ejercicios de bucles, Math y String
  - Bucles ✔️
  - Math ✔️
- - String ❌
+ - String ✔️
